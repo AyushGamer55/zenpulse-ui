@@ -74,15 +74,12 @@ export default function Dashboard() {
           <div className="text-center space-y-6">
             {/* Logo & Title */}
             <div className="flex items-center justify-center space-x-4 mb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-pink-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-2xl animate-pulse">
-                <span className="text-white font-black text-2xl">Z</span>
-              </div>
               <div>
                 <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-400 via-pink-400 to-blue-500 bg-clip-text text-transparent">
                   ZenPulse Dashboard
                 </h1>
                 <p className="text-muted-foreground">
-                  Your AI-Powered Wellness Intelligence
+                  Your AI-Powered Sentiment Analysis Intelligence
                 </p>
               </div>
             </div>
