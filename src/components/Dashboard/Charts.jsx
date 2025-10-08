@@ -29,11 +29,11 @@ export default function Charts() {
   const [error, setError] = useState(null);
 
   const isDark = theme === "dark";
-  const accentPurple = isDark ? "#a855f7" : "#6b21a8";
-  const accentCyan = isDark ? "#00ffff" : "#0891b2";
-  const accentGreen = isDark ? "#00ff88" : "#10b981";
-  const accentRed = isDark ? "#ff4444" : "#dc2626";
-  const accentYellow = isDark ? "#ffaa00" : "#d97706";
+  const accentPurple = isDark ? "#a855f7" : "#6b21a8"; // softPurple
+  const accentCyan = isDark ? "#4ade80" : "#22c55e"; // mutedGreen
+  const accentGreen = isDark ? "#4ade80" : "#22c55e"; // mutedGreen
+  const accentRed = isDark ? "#f87171" : "#ef4444"; // mutedRed
+  const accentYellow = isDark ? "#fbbf24" : "#eab308"; // mutedYellow
   const bgTooltip = isDark ? "#1f1f1f" : "#ffffff";
   const textTooltip = isDark ? "#fff" : "#1a202c";
   const strokeGrid = isDark ? "#333" : "#d1d5db";
@@ -230,11 +230,11 @@ export default function Charts() {
       <h2
         className={`text-xl font-semibold mb-4 text-center ${
           isDark
-            ? "text-purple-400 drop-shadow-[0_0_6px_#a855f7]"
-            : "text-purple-600"
+            ? "text-softPurple"
+            : "text-softPurple"
         }`}
       >
-        🤖 AI Sentiment Analysis
+        📊 Mindful Insights
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -336,10 +336,9 @@ export default function Charts() {
       </div>
 
       {/* Simple insights */}
-      <div className="mt-4 p-3 rounded-xl bg-gradient-to-r from-purple-50 to-cyan-50 dark:from-purple-900/20 dark:to-cyan-900/20">
+      <div className="mt-4 p-3 rounded-xl bg-gradient-to-r from-sereneLavender/10 to-mutedGreen/10 dark:from-sereneLavender/20 dark:to-mutedGreen/20">
         <div className="text-sm text-center">
-          <strong>💡 Tip:</strong> Chat with AI to generate sentiment analysis
-          data!
+          <strong>💡 Tip:</strong> Engage in mindful conversations to see your emotional patterns
         </div>
       </div>
     </div>

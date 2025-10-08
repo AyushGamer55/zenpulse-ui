@@ -35,21 +35,21 @@ export default function Journal() {
       <h2
         className={`text-xl font-semibold mb-4 ${
           isDark
-            ? "text-pink-400 drop-shadow-[0_0_6px_#ff00ff]"
-            : "text-pink-600"
+            ? "text-softPurple"
+            : "text-softPurple"
         }`}
       >
-        📝 Journal Your Thoughts
+        📝 Reflect & Journal
       </h2>
-      
+
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Write your thoughts, feelings, or daily reflections..."
+        placeholder="Take a moment to reflect on your day, express your feelings, or note your thoughts..."
         className={`w-full h-32 p-3 rounded-lg border focus:ring-2 transition resize-none ${
           isDark
-            ? "bg-gray-800 text-white border-pink-500 focus:ring-pink-400 placeholder-gray-400"
-            : "bg-gray-50 text-black border-pink-300 focus:ring-pink-500 placeholder-gray-500"
+            ? "bg-gray-800 text-white border-softPurple focus:ring-softPurple placeholder-gray-400"
+            : "bg-gray-50 text-black border-softPurple/50 focus:ring-softPurple placeholder-gray-500"
         }`}
       />
       
@@ -59,7 +59,7 @@ export default function Journal() {
         className="mt-3 px-6 py-2 font-bold"
         variant={isDark ? "secondary" : "default"}
       >
-        💾 Save Journal Entry
+        💾 Save Reflection
       </Button>
     </div>
   );

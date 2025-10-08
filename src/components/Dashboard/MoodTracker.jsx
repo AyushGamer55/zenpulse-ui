@@ -114,7 +114,7 @@ export default function MoodTracker() {
     >
       {/* Auto-update indicator */}
       {autoUpdated && (
-        <div className="absolute -top-2 -right-2 bg-pink-500 text-white px-2 py-1 rounded-full text-xs font-medium animate-pulse shadow-lg z-10">
+        <div className="absolute -top-2 -right-2 bg-softPurple text-white px-2 py-1 rounded-full text-xs font-medium shadow-lg z-10">
           🤖 AI
         </div>
       )}
@@ -122,12 +122,12 @@ export default function MoodTracker() {
       <div className="flex items-center justify-between mb-3">
         <h3
           className={`text-sm font-semibold ${
-            isDark ? "text-cyan-300" : "text-cyan-600"
+            isDark ? "text-calmBlue" : "text-calmBlue"
           }`}
         >
           Today's Mood
           {autoUpdated && (
-            <span className="ml-2 text-xs text-pink-500 font-bold">(AI Detected)</span>
+            <span className="ml-2 text-xs text-softPurple font-bold">(AI Detected)</span>
           )}
         </h3>
         <span className="text-xs text-muted-foreground">
@@ -145,12 +145,12 @@ export default function MoodTracker() {
           
           if (isAiHighlighted) {
             // ✨ GUARANTEED AI HIGHLIGHT: Custom CSS class + inline styles
-            buttonClass += "animate-ai-highlight border-pink-500";
+            buttonClass += "animate-ai-highlight border-softPurple";
           } else if (isActive) {
-            // Normal highlighted: Cyan ring
-            buttonClass += isDark 
-              ? "ring-2 ring-cyan-400 shadow-lg bg-cyan-900/30 border-cyan-400" 
-              : "ring-2 ring-cyan-400 shadow-lg bg-cyan-50 border-cyan-300";
+            // Normal highlighted: calmBlue ring
+            buttonClass += isDark
+              ? "ring-2 ring-calmBlue shadow-lg bg-calmBlue/30 border-calmBlue"
+              : "ring-2 ring-calmBlue shadow-lg bg-calmBlue/10 border-calmBlue";
           } else {
             // Not active: Hover effects
             buttonClass += "hover:scale-105 border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500";
@@ -170,9 +170,9 @@ export default function MoodTracker() {
               className={buttonClass}
               title={`Mood ${n}: ${moodLabels[n - 1]}${isAiHighlighted ? ' (AI Detected)' : ''}`}
               style={isAiHighlighted ? {
-                boxShadow: '0 0 20px rgba(236, 72, 153, 0.8)',
-                borderColor: '#ec4899',
-                backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                boxShadow: '0 0 20px rgba(168, 85, 247, 0.8)',
+                borderColor: '#a855f7',
+                backgroundColor: 'rgba(168, 85, 247, 0.1)',
               } : {}}
             >
               {moodEmojis[i]}
@@ -185,15 +185,15 @@ export default function MoodTracker() {
         onClick={handleSave}
         className={`w-full py-2 px-4 font-medium rounded-lg shadow-sm transition-all ${
           isDark
-            ? "bg-cyan-500 text-black hover:bg-cyan-400"
-            : "bg-cyan-600 text-white hover:bg-cyan-500"
+            ? "bg-calmBlue text-white hover:bg-calmBlue/80"
+            : "bg-calmBlue text-white hover:bg-calmBlue/90"
         }`}
       >
         {autoUpdated ? "Confirm Mood" : "Update Mood"}
       </button>
 
       {autoUpdated && (
-        <p className="text-xs text-center text-pink-500 font-bold mt-2 animate-pulse">
+        <p className="text-xs text-center text-softPurple font-bold mt-2">
           🤖 AI detected your mood from our conversation
         </p>
       )}
