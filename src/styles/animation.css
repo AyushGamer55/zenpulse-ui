@@ -1,0 +1,46 @@
+/* styles/animation.css */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.6); 
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.9); 
+    transform: scale(1.05);
+  }
+}
+
+.animate-ai-highlight {
+  animation: pulseGlow 1.5s ease-in-out infinite;
+  border: 3px solid #ec4899 !important;
+  background: rgba(236, 72, 153, 0.1) !important;
+}
+
+.animate-glow {
+  animation: pulseGlow 2s infinite;
+}
+ 
+/* Add to your animation.css or styles */
+textarea {
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+textarea {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

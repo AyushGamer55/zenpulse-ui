@@ -1,0 +1,72 @@
+/* styles/theme.css */
+:root {
+  /* Core Backgrounds */
+  --bg-dark: #0a192f; 
+  --bg-light: #f9fafb; 
+
+  /* Text colors */
+  --text-dark: #ffffff;
+  --text-light: #1a202c;
+
+  /* Accent colors (rotatable palette) */
+  --accent-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-pink: #ec4899;
+  --accent-red: #ef4444;
+  --accent-cyan: #06b6d4;
+}
+
+body[data-theme="dark"] {
+  background: linear-gradient(135deg, var(--bg-dark), #112240);
+  color: var(--text-dark) !important;
+}
+
+body[data-theme="light"] {
+  background: linear-gradient(135deg, var(--bg-light), #e5f4ff);
+  color: var(--text-light) !important;
+}
+
+/* Utility classes for accents */
+.accent-blue {
+  color: var(--accent-blue);
+}
+.accent-green {
+  color: var(--accent-green);
+}
+.accent-pink {
+  color: var(--accent-pink);
+}
+.accent-red {
+  color: var(--accent-red);
+}
+.accent-cyan {
+  color: var(--accent-cyan);
+}
+
+/* Background helpers */
+.bg-theme-dark {
+  background: var(--bg-dark);
+}
+.bg-theme-light {
+  background: var(--bg-light);
+}
+
+.text-theme-dark {
+  color: var(--text-dark);
+}
+.text-theme-light {
+  color: var(--text-light);
+}
+
+/* Dashboard grid and chat widget styles */
+.grid {
+  gap: 2rem;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
