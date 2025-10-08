@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import client from "../../api/client";
 
 export default function Register() {
   const [showPass, setShowPass] = useState(false);
@@ -19,7 +19,7 @@ export default function Register() {
       return;
     }
     try {
-      const response = await axios.post("/api/auth/register", {
+      const response = await client.post("/auth/register", {
         email,
         password,
         displayName,
