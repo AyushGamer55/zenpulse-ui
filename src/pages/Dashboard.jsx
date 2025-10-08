@@ -62,26 +62,27 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-accent/5">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-accent-cyan/5 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* 🎯 HERO DASHBOARD HEADER */}
       <div className="relative overflow-hidden">
-        {/* Subtle Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-calmBlue/5 via-softPurple/5 to-sereneLavender/5"></div>
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-pink-400/10 to-purple-400/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-cyan-500/5"></div>
 
         {/* Main Header */}
         <div className="relative container mx-auto px-6 py-12">
           <div className="text-center space-y-6">
             {/* Logo & Title */}
             <div className="flex items-center justify-center space-x-4 mb-8">
-              <div className="w-16 h-16 bg-gradient-to-br from-calmBlue to-softPurple rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-pink-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-2xl animate-pulse">
                 <span className="text-white font-black text-2xl">Z</span>
               </div>
               <div>
-                <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-calmBlue via-softPurple to-sereneLavender bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-400 via-pink-400 to-blue-500 bg-clip-text text-transparent">
                   ZenPulse Dashboard
                 </h1>
                 <p className="text-muted-foreground">
-                  Your AI-Powered Wellness Companion
+                  Your AI-Powered Wellness Intelligence
                 </p>
               </div>
             </div>
@@ -158,19 +159,19 @@ export default function Dashboard() {
               }`}
             >
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-calmBlue to-softPurple rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold">🤖</span>
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">AI Assistant Active</h3>
                   <p className="text-sm text-muted-foreground">
-                    Gentle sentiment analysis
+                    Session sentiment analysis
                   </p>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-3 text-center">
-                <div className="p-3 bg-calmBlue/10 rounded-xl">
-                  <div className="text-2xl font-bold text-calmBlue">
+                <div className="p-3 bg-cyan-500/10 rounded-xl">
+                  <div className="text-2xl font-bold text-cyan-500">
                     {sentimentStats?.positive +
                       sentimentStats?.neutral +
                       sentimentStats?.negative || 0}
@@ -179,8 +180,8 @@ export default function Dashboard() {
                     Session Analyses
                   </div>
                 </div>
-                <div className="p-3 bg-softPurple/10 rounded-xl">
-                  <div className="text-2xl font-bold text-softPurple">
+                <div className="p-3 bg-pink-500/10 rounded-xl">
+                  <div className="text-2xl font-bold text-pink-500">
                     {sentimentStats?.positive &&
                     sentimentStats?.neutral + sentimentStats?.negative > 0
                       ? Math.round(
@@ -218,20 +219,20 @@ export default function Dashboard() {
                   : "bg-white/95 border-gray-200"
               }`}
             >
-              <div className="bg-gradient-to-r from-calmBlue/10 to-softPurple/10 px-8 py-6 border-b border-gray-200 dark:border-gray-700">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-pink-500/10 px-8 py-6 border-b border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-bold bg-gradient-to-r from-calmBlue to-softPurple bg-clip-text text-transparent">
-                      Mindful Conversation
+                    <h2 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                      AI Conversation
                     </h2>
                     <p className="text-sm text-muted-foreground">
-                      Gentle sentiment analysis & mood tracking
+                      Real-time sentiment analysis & mood tracking
                     </p>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-mutedGreen rounded-full"></div>
-                    <span className="text-sm font-medium text-mutedGreen">
-                      Active
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium text-green-500">
+                      Live
                     </span>
                   </div>
                 </div>
@@ -251,20 +252,20 @@ export default function Dashboard() {
                   : "bg-white/95 border-gray-200"
               }`}
             >
-              <div className="bg-gradient-to-r from-softPurple/10 to-sereneLavender/10 px-8 py-6 border-b border-gray-200 dark:border-gray-700">
+              <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 px-8 py-6 border-b border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-bold bg-gradient-to-r from-softPurple to-sereneLavender bg-clip-text text-transparent">
-                      Wellness Analytics
+                    <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                      AI Analytics Dashboard
                     </h2>
                     <p className="text-sm text-muted-foreground">
-                      Gentle sentiment trends & emotional insights
+                      Sentiment trends & emotional insights
                     </p>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-tranquilTeal rounded-full"></div>
-                    <span className="text-sm font-medium text-tranquilTeal">
-                      Mindful
+                    <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium text-purple-500">
+                      AI Powered
                     </span>
                   </div>
                 </div>
@@ -288,28 +289,28 @@ export default function Dashboard() {
         <div className="max-w-8xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-calmBlue mb-1">🤖</div>
+              <div className="text-3xl font-bold text-cyan-500 mb-1">🤖</div>
               <div className="text-lg font-semibold">AI Analysis</div>
               <div className="text-sm text-muted-foreground">
-                Gentle processing
+                Real-time processing
               </div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-mutedGreen mb-1">📊</div>
-              <div className="text-lg font-semibold">Calm Charts</div>
+              <div className="text-3xl font-bold text-green-500 mb-1">📊</div>
+              <div className="text-lg font-semibold">Live Charts</div>
               <div className="text-sm text-muted-foreground">
-                Mindful insights
+                Interactive insights
               </div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-softPurple mb-1">💬</div>
-              <div className="text-lg font-semibold">Mindful Chat</div>
+              <div className="text-3xl font-bold text-purple-500 mb-1">💬</div>
+              <div className="text-lg font-semibold">Smart Chat</div>
               <div className="text-sm text-muted-foreground">
-                Empathetic AI
+                Context-aware AI
               </div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-tranquilTeal mb-1">🔒</div>
+              <div className="text-3xl font-bold text-pink-500 mb-1">🔒</div>
               <div className="text-lg font-semibold">Secure</div>
               <div className="text-sm text-muted-foreground">Privacy first</div>
             </div>

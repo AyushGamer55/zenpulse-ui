@@ -8,11 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        calmBlue: '#6495ED',
-        softPurple: '#A78BFA',
-        mutedGreen: '#6EE7B7',
-        sereneLavender: '#C4B5FD',
-        tranquilTeal: '#5EEAD4',
+        neonPink: '#FF6EC7',
+        cyberGreen: '#00FF99',
       }
     }
   },
