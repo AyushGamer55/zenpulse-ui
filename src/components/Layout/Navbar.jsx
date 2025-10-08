@@ -31,14 +31,14 @@ export default function Navbar() {
             className="flex items-center space-x-4 cursor-pointer group"
             onClick={() => navigate("/")}
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-pink-400 to-blue-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 animate-pulse">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 animate-pulse">
               <span className="text-white font-black text-xl">Z</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-black bg-gradient-to-r from-cyan-400 via-pink-400 to-blue-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+              <h1 className="text-2xl font-black bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
                 ZenPulse
               </h1>
-              <p className="text-xs text-muted-foreground group-hover:text-cyan-400 transition-colors duration-300">
+              <p className="text-xs text-muted-foreground group-hover:text-blue-500 transition-colors duration-300">
                 AI Wellness Assistant
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `flex items-center space-x-3 px-6 py-3 rounded-2xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                     isActive
-                      ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-xl transform scale-105"
+                      ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-xl transform scale-105"
                       : `hover:bg-gray-100/80 dark:hover:bg-gray-800/80 backdrop-blur-sm ${
                           isDark
                             ? "text-gray-300 hover:text-white"
@@ -80,7 +80,7 @@ export default function Navbar() {
               onClick={toggleTheme}
               variant="outline"
               size="sm"
-              className="w-12 h-12 p-0 border-2 hover:bg-cyan-500 hover:text-white hover:border-cyan-500 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              className="w-12 h-12 p-0 border-2 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all duration-300 hover:scale-110 hover:shadow-lg"
             >
               <span className="text-xl">{theme === "dark" ? "☀️" : "🌙"}</span>
             </Button>
@@ -98,7 +98,7 @@ export default function Navbar() {
             {user && (
               <div className="flex items-center space-x-3">
                 <div className="hidden sm:flex items-center space-x-2 text-sm">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-sm">
                       {user?.username?.charAt(0).toUpperCase() ||
                         user?.email?.charAt(0).toUpperCase() ||
